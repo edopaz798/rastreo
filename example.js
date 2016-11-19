@@ -24,7 +24,7 @@ app.post('/', urlencodedParser, function (req, res) {
 	
   request(options, function (error, response, body) {
 	  if(!error){
-		  var $ = cheerio.load(body.replace(/..\/images\/Cientes\/arExpress.jpg/g, ""));
+		  var $ = cheerio.load(body.replace(/..\/images\/Cientes\/arExpress.jpg/g, "http://www.masterenterpriseusa.com/rastreo.html"));
 		  var body2 = $.html();
 		  
 		  res.send(body2)
